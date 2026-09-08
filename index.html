@@ -2,46 +2,187 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Anna's Grandma and Grandpa</title>
+  <title>Fourteen Hundred Miles</title>
 
   <style>
     body {
       margin: 0;
-      background: black;
+      background: #f5f1e8;
+      color: #3b352d;
+      font-family: Georgia, "Times New Roman", serif;
       text-align: center;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 30px 20px 60px;
     }
 
     img {
       max-width: 100%;
-      max-height: 90vh;
+      max-height: 75vh;
       cursor: pointer;
+      display: block;
+      margin: 0 auto 25px;
+    }
+
+    .hint {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 35px;
     }
 
     audio {
-      display: block;
-      margin: 10px auto;
+      display: none;
+    }
+
+    .lyrics {
+      max-width: 650px;
+      margin: 0 auto;
+      text-align: left;
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: normal;
+      margin: 10px 0 35px;
+    }
+
+    .verse {
+      margin-bottom: 28px;
+    }
+
+    .chorus {
+      margin: 35px 0;
+      padding: 20px 25px;
+      background: #ebe4d6;
+      border-radius: 8px;
+    }
+
+    .ending {
+      text-align: center;
+      font-size: 20px;
+      font-style: italic;
+      margin-top: 40px;
+      line-height: 2;
     }
   </style>
 </head>
 
 <body>
 
-  <img id="picture" src="CountryGrandparents.png"
+<div class="container">
+
+  <img id="picture"
+       src="CountryGrandparents.png"
        alt="Anna's Grandma and Grandpa">
 
+  <div class="hint">Click the picture to play the song</div>
+
   <audio id="song" controls>
-    <source src="./FourteenHundredMiles.mp3" type="audio/mpeg">
+    <source src="FourteenHundredMiles.mp3" type="audio/mpeg">
   </audio>
 
-  <script>
-    const picture = document.getElementById("picture");
-    const song = document.getElementById("song");
+  <div class="lyrics">
 
-    picture.addEventListener("click", function() {
-      song.style.display = "block";
-      song.play();
-    });
-  </script>
+    <h1>Fourteen Hundred Miles</h1>
+
+    <div class="verse">
+      Two days on the road, staring at the line<br>
+      Leaving Plymouth, Michigan, leaving town behind<br>
+      Lily stayed wide awake, watching every mile<br>
+      Drinking ice-cold Coke Zero, trading jokes and trading smiles
+    </div>
+
+    <div class="verse">
+      Fourteen hundred miles to Texas, Ford Bronco running clear<br>
+      Counting down the highway signs to get us closer there<br>
+      Two days on the interstate, we were Texas bound<br>
+      Pulled off for the night while still in Arkansas ground
+    </div>
+
+    <div class="verse">
+      Lily curled up quiet while we crashed out in the bed<br>
+      The Embassy Suite was great, including the breakfast spread<br>
+      Back on the road by sunrise, ready to go the extra mile<br>
+      We'd never seen you yet, Ahhna, but you already made us smile
+    </div>
+
+    <div class="chorus">
+      Yeah, I'm a little bit rock and roll, driving fast and loud!<br>
+      And I'm a little bit country road, making Plymouth proud!<br>
+      We threw the map out the window, put the pedal to the floor<br>
+      Fourteen hundred miles of highway, now we're knocking at the door!<br><br>
+
+      Austin, Texas lights are shining, set the heavy rhythm free<br>
+      We traveled all this way just to see who you would be!
+    </div>
+
+    <div class="verse">
+      Lily never laid down once, she held her head up high<br>
+      Anxious for her pal Kai, under a Texas sky<br>
+      No clock could slow the miles down, no map could ease our mind<br>
+      Every fence post and red barn was leaving Michigan behind
+    </div>
+
+    <div class="verse">
+      Every turn we took was leading straight into this place<br>
+      Just to hold our breath and finally look upon your face
+    </div>
+
+    <div class="verse">
+      Crossed the line into Texas, felt the miles start to fly<br>
+      Pulled off at Buc-ee's for gas, giant beaver waving hi<br>
+      Eyed the wall of beef jerky and souvenirs so grand<br>
+      Grabbed a barbecue sandwich, and a frozen Coke in hand
+    </div>
+
+    <div class="verse">
+      Every mile behind us brought us closer to your door<br>
+      We couldn't wait to hold you, Ahhna, and love you even more
+    </div>
+
+    <div class="chorus">
+      Yeah, I'm a little bit rock and roll, driving fast and loud!<br>
+      And I'm a little bit country road, making Plymouth proud!<br>
+      We threw the map out the window, put the pedal to the floor<br>
+      Fourteen hundred miles of highway, now we're knocking at the door!<br><br>
+
+      Austin, Texas lights are shining, set the heavy rhythm free<br>
+      We traveled all this way just to see who you would be!
+    </div>
+
+    <div class="verse">
+      Yeah, I was a little bit country...<br>
+      And I was a little bit rock and roll...
+    </div>
+
+    <div class="ending">
+      Two days on the road, just to be there when you arrive...<br>
+      Every mile was worth it, just to watch you thrive...<br><br>
+
+      Welcome to the world, sweet Ahhna.<br>
+      Welcome to the world, sweet Ahhna.<br><br>
+
+      We love you
+    </div>
+
+  </div>
+</div>
+
+<script>
+  const picture = document.getElementById("picture");
+  const song = document.getElementById("song");
+
+  picture.addEventListener("click", function() {
+    song.play();
+  });
+</script>
 
 </body>
 </html>
