@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Anna's Grandma and Grandpa</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100vh;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img id="picture"
+       src="CountryGrandparents.png"
+       alt="Anna's Grandma and Grandpa">
+
+  <audio id="song" src="FourteenHundred.mp3"></audio>
+
+  <script>
+    const picture = document.getElementById("picture");
+    const song = document.getElementById("song");
+
+    picture.addEventListener("click", function() {
+      song.play();
+    });
+  </script>
+
+</body>
+</html>
