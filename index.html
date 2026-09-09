@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Fourteen Hundred Miles</title>
 
   <style>
@@ -11,34 +13,36 @@
       color: #3b352d;
       font-family: Georgia, "Times New Roman", serif;
       text-align: center;
+      overflow-x: hidden;
     }
 
     .container {
       max-width: 1000px;
       margin: 0 auto;
       padding: 30px 20px 60px;
+      box-sizing: border-box;
     }
 
     img {
       max-width: 100%;
-      max-height: 75vh;
+      height: auto;
       cursor: pointer;
       display: block;
-      margin: 0 auto 25px;
+      margin: 0 auto 20px;
     }
 
     .hint {
       font-family: Arial, sans-serif;
       font-size: 14px;
       color: #777;
-      margin-bottom: 35px;
+      margin-bottom: 15px;
     }
 
     audio {
       display: block;
       width: 500px;
       max-width: 90%;
-      margin: 10px auto 35px;
+      margin: 10px auto 40px;
     }
 
     .lyrics {
@@ -74,6 +78,46 @@
       margin-top: 40px;
       line-height: 2;
     }
+
+    /* Adjustments for phones */
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px 12px 40px;
+      }
+
+      img {
+        margin-bottom: 15px;
+      }
+
+      .hint {
+        font-size: 13px;
+      }
+
+      audio {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+
+      .lyrics {
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      h1 {
+        font-size: 27px;
+        margin-bottom: 28px;
+      }
+
+      .chorus {
+        padding: 18px 16px;
+        margin: 30px 0;
+      }
+
+      .ending {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 
@@ -85,8 +129,11 @@
        src="CountryGrandparents.png"
        alt="Anna's Grandma and Grandpa">
 
+  <div class="hint">Click the picture to play the song</div>
+
   <audio id="song" controls>
     <source src="FourteenHundredMiles.mp3" type="audio/mpeg">
+    Your browser does not support audio playback.
   </audio>
 
   <div class="lyrics">
@@ -181,7 +228,11 @@
   const song = document.getElementById("song");
 
   picture.addEventListener("click", function() {
-    song.play();
+    if (song.paused) {
+      song.play();
+    } else {
+      song.pause();
+    }
   });
 </script>
 
